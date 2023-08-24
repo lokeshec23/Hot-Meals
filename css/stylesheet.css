@@ -271,7 +271,12 @@ header button {
   height: 136px;
   flex-shrink: 0;
 }
-
+.left-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
+}
 #discount-box .discount-text {
   font-size: 28px;
   font-weight: 700;
@@ -280,5 +285,13 @@ header button {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+#discount-box .left-line {
+  border-right: 2px solid #cfcfcf;
+}
+
+#discount-box .left-line:last-child {
+  border: none;
 }
 /* end discount container */
