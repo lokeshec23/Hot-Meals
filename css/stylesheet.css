@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Qwigley&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 
 * {
   margin: 0;
@@ -35,7 +36,7 @@ header #address {
 header strong {
   /* Button Bold */
   color: var(--theme-gray-800, #424242);
-  font-family: Source Sans Pro;
+  font-family: Open Sans;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -202,3 +203,82 @@ header button {
   background: linear-gradient(138deg, #ff7a7a 0%, #f65900 100%);
 }
 /* End Yellow Container */
+
+/* showcase img */
+#showcase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 80px;
+}
+#showcase img {
+  width: 300px;
+  /* height: 300px; */
+  margin: 5px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: lightgray 50% / cover no-repeat;
+}
+
+#showcase p {
+  color: var(--theme-gray-800, #424242);
+  font-size: 20px;
+  margin: 0 0 10px 15px;
+  font-weight: 700;
+  line-height: 120%; /* 26.4px */
+}
+
+#showcase button {
+  display: inline-flex;
+  margin-left: 10px;
+  padding: 5px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 8px;
+  background: rgba(241, 114, 40, 0.2);
+  border: none;
+  color: var(--theme-warning, #f17228);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 120%;
+}
+/* end showcase img */
+
+/* discount container */
+#discount-container #discount-heading {
+  color: #f17228;
+  text-align: center;
+  font-size: 43px;
+  font-weight: 700;
+  line-height: 112%;
+  margin: 80px;
+}
+
+#discount-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px auto;
+  padding: 50px;
+  width: 80%;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 5px 27px 11px rgba(255, 181, 21, 0.1);
+}
+
+#discount-box img {
+  width: 136px;
+  height: 136px;
+  flex-shrink: 0;
+}
+
+#discount-box .discount-text {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 120%;
+  background: linear-gradient(150deg, #fb3c00 0%, #ffb800 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* end discount container */
