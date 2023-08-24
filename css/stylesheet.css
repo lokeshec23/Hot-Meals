@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Qwigley&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* header */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header #heading {
+  color: var(--theme-primary, #ffb30e);
+  font-family: "Qwigley", cursive;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+header #address {
+  color: var(--theme-gray-800, #424242);
+  font-family: Open Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+header strong {
+  /* Button Bold */
+  color: var(--theme-gray-800, #424242);
+  font-family: Source Sans Pro;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+header i {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 140%;
+}
+
+#search-icon {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 100%;
+}
+
+header button {
+  cursor: pointer;
+  background: #fff;
+  width: 118px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 24px;
+  gap: 10px;
+  border-radius: 8px;
+  border: 1px solid #ffac0d;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  background: var(
+    --yellow-button,
+    linear-gradient(150deg, #ffb800 0%, #ff8a00 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* end header */
