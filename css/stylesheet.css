@@ -474,6 +474,7 @@ header button {
 .col-4 img {
   width: 250px;
   margin-bottom: 20px;
+  border-radius: 5%;
 }
 
 .col-4 p {
