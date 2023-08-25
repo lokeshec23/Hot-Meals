@@ -7,6 +7,13 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  background: #fff;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
 /* header */
 header {
   width: 100%;
@@ -222,7 +229,8 @@ header button {
 
 #showcase p {
   color: var(--theme-gray-800, #424242);
-  font-size: 20px;
+  font-family: "Poppins";
+  font-size: 18px;
   margin: 0 0 10px 15px;
   font-weight: 700;
   line-height: 120%; /* 26.4px */
@@ -256,6 +264,7 @@ header button {
   font-weight: 700;
   line-height: 112%;
   margin: 80px;
+  font-family: "Poppins", sans-serif;
 }
 
 #discount-box {
@@ -310,12 +319,13 @@ header button {
 
 #food-search-container #food-text {
   color: var(--theme-gray-900, #212121);
-  font-size: 35px;
+  font-size: 30px;
   position: relative;
   top: 50px;
   left: 150px;
   font-weight: 700;
   line-height: 112%;
+  font-family: "Poppins";
 }
 
 #search-food-container {
@@ -334,9 +344,164 @@ header button {
 
 #search-food-container p {
   color: var(--theme-gray-800, #424242);
+  font-family: "Poppins";
   font-size: 20px;
   font-weight: 700;
   line-height: 120%;
   text-align: center;
 }
 /* end food search container */
+
+/* best deals container */
+#best-deals-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+#deals-text {
+  text-align: justify;
+  margin-right: 50px;
+}
+
+#best-deals-container p {
+  color: #353535;
+
+  /* Headline 4 Bold */
+  font-family: "Poppins";
+  font-size: 43px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 112%; /* 48.16px */
+}
+
+#best-deals-container p span {
+  color: var(--theme-primary, #ffb30e);
+
+  /* Headline 4 Bold */
+  font-family: "Poppins";
+  font-size: 43px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 112%;
+}
+
+#best-deals-container #text {
+  color: rgba(97, 97, 97, 0.69);
+  font-family: "Poppins";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 20px 0 60px 0;
+  line-height: 140%; /* 25.2px */
+  align-self: stretch;
+}
+
+#best-deals-container button {
+  cursor: pointer;
+  display: flex;
+  color: #fff;
+  width: 407px;
+  padding: 21px 48px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: var(
+    --yellow-button,
+    linear-gradient(150deg, #ffb800 0%, #ff8a00 100%)
+  );
+  border: none;
+  font-weight: 700;
+  font-family: "Poppins";
+  box-shadow: 0px 14px 32px 0px rgba(255, 178, 14, 0.29),
+    0px 5px 8px 0px rgba(222, 151, 0, 0.24);
+}
+
+#best-deals-container img {
+  width: 700px;
+  height: 350px;
+  flex-shrink: 0;
+  border-radius: 20px;
+}
+/* end best deals container */
+
+/* popular item */
+#popular-items-container #heading {
+  color: var(--theme-gray-900, #212121);
+  text-align: center;
+  margin-bottom: 80px;
+  /* Headline 4 Bold */
+  font-family: "Poppins";
+  font-size: 43px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 112%; /* 48.16px */
+}
+#popular-items-container {
+  width: 100%;
+}
+#popular-items-container .row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+.col-4{
+  flex-basis: 25%;
+  /* padding: 50px; */
+  min-width: 200px;
+  margin-bottom: 50px;
+  transition: transform 0.5s;
+}
+
+.col-4 img {
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.col-4 p {
+  color: var(--theme-gray-800, #424242);
+  /* text-align: center; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 120%; /* 26.4px */
+}
+.col-4 button {
+  display: flex;
+  width: 250px;
+  padding: 21px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: var(--theme-warning, #f17228);
+
+  /* Shadow/2 */
+  box-shadow: 0px 20px 40px 0px rgba(250, 99, 35, 0.24),
+    0px 5px 10px 0px rgba(253, 114, 92, 0.22);
+  color: var(--theme-white, #fff);
+  text-align: center;
+
+  /* Button Bold */
+  font-family: "Poppins";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 18px */
+  border: none;
+}
+
+.mt-5{
+  margin-top: 80px;
+}
+/* end popular items  */
