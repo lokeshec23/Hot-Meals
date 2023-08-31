@@ -1,4 +1,4 @@
-<h1>Hot Meals Website Documentation</h1>
+<h1>Hot Meals Website</h1>
 
 <strong>Introduction:</strong>
 This document provides documentation for the HTML and CSS code of the Hot Meals website. The Hot Meals website is designed for ordering and delivering meals. It features a visually appealing and user-friendly interface. This documentation will explain the structure of the code, its components, and how they contribute to the website's functionality and appearance.
