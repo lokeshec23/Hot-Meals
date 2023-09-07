@@ -281,3 +281,8 @@ footer a {
 .form-heading{
   font-family: cursive, sans-serif;
 }
+
+#forgot-password{
+  cursor: pointer;
+  margin-bottom: 10px;
+}

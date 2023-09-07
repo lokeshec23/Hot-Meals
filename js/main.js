@@ -1,6 +1,7 @@
 const signUpButton = document.getElementById("signUp");
 const signInButton = document.getElementById("signIn");
 const container = document.getElementById("container");
+const homeLogin = document.getElementById("home-login");
 
 signUpButton.addEventListener("click", () => {
   container.classList.add("right-panel-active");
@@ -15,6 +16,7 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirm-password");
 const signBtn = document.getElementById("sign-btn");
+const forgotPassword = document.getElementById("forgot-password");
 
 signBtn.addEventListener("click", (event) => {
   event.preventDefault();
@@ -51,6 +53,8 @@ loginBtn.addEventListener("click", (event) => {
   var getPwd = localStorage.getItem("password", password.value);
   if (getEmail === cEmail.value && getPwd === cPassword.value) {
     alert("Login Successfully!");
+    window.location = "index.html";
+    homeLogin.textContent = "HI";
     resetInput();
   } else {
     alert("Invaild login");
@@ -67,7 +71,8 @@ function resetInput() {
   cPassword.value = "";
 }
 
-// <div id="msg-container">
-//   <h3 class="">Account Created Succssfully</h3>
-// </div>
+forgotPassword.addEventListener("click", () => {
+  alert("Please create a new account");
+});
 
+console.log(document);
