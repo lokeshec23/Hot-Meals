@@ -9,7 +9,6 @@
   </head>
   <body>
     <h1 id="heading">Hot Meals</h1>
-
     <div class="container" id="container">
       <div class="form-container sign-up-container">
         <form action="#">
@@ -27,12 +26,23 @@
           </div>
           <span>or use your email for registration</span>
           <input type="text" placeholder="Name" id="name" />
-          <input type="email" placeholder="Email" id="email" />
-          <input type="password" placeholder="Password" id="password" />
+          <input
+            type="email"
+            placeholder="Email"
+            id="email"
+            autocomplete="new-password"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            id="password"
+            autocomplete="new-password"
+          />
           <input
             type="password"
             placeholder="Confim Password"
             id="confirm-password"
+            autocomplete="new-password"
           />
           <button id="sign-btn">Sign Up</button>
         </form>
@@ -52,8 +62,18 @@
             /></a>
           </div>
           <span>or use your account</span>
-          <input type="email" placeholder="Email" id="cEmail" />
-          <input type="password" placeholder="Password" id="cPassword" />
+          <input
+            type="email"
+            placeholder="Email"
+            id="cEmail"
+            autocomplete="new-password"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            id="cPassword"
+            autocomplete="new-password"
+          />
           <p id="forgot-password">Forgot your password?</p>
           <button id="login-btn">Login In</button>
         </form>
@@ -61,15 +81,17 @@
       <div class="overlay-container">
         <div class="overlay">
           <div class="overlay-panel overlay-left">
-            <h1>Welcome Back!</h1>
-            <p>
+            <h1 class="main-heading">Welcome Back!</h1>
+            <p class="sub-heading">
               To keep connected with us please login with your personal info
             </p>
             <button class="ghost" id="signIn">Sign In</button>
           </div>
           <div class="overlay-panel overlay-right">
-            <h1>Hello, Friend!</h1>
-            <p>Enter your personal details and start journey with us</p>
+            <h1 class="main-heading">Hello, Friend!</h1>
+            <p class="sub-heading">
+              Enter your personal details and start journey with us
+            </p>
             <button class="ghost" id="signUp">Sign Up</button>
           </div>
         </div>
@@ -81,6 +103,7 @@
     </footer>
     <!-- end footer -->
 
-    <script src="./js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>

@@ -1,7 +1,17 @@
 const signUpButton = document.getElementById("signUp");
 const signInButton = document.getElementById("signIn");
 const container = document.getElementById("container");
-const homeLogin = document.getElementById("home-login");
+
+
+const heading = document.getElementById("heading");
+
+const userName = document.getElementById("name");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const confirmPassword = document.getElementById("confirm-password");
+const signBtn = document.getElementById("sign-btn");
+const forgotPassword = document.getElementById("forgot-password");
+var flag = 1;
 
 signUpButton.addEventListener("click", () => {
   container.classList.add("right-panel-active");
@@ -11,13 +21,6 @@ signInButton.addEventListener("click", () => {
   container.classList.remove("right-panel-active");
 });
 
-const userName = document.getElementById("name");
-const email = document.getElementById("email");
-const password = document.getElementById("password");
-const confirmPassword = document.getElementById("confirm-password");
-const signBtn = document.getElementById("sign-btn");
-const forgotPassword = document.getElementById("forgot-password");
-
 signBtn.addEventListener("click", (event) => {
   event.preventDefault();
   if (
@@ -26,18 +29,18 @@ signBtn.addEventListener("click", (event) => {
     password === "" ||
     confirmPassword === ""
   ) {
-    alert("please enter all fields!");
+    setMessage("🛑 Please enter all fields!", "error");
   } else if (password.value !== confirmPassword.value) {
-    alert("Password doesn't match!");
+    setMessage("🚫 Password doesn't match!", "error");
     resetInput();
   } else {
     setLocalStorage();
-    alert("Account Created Successfully!");
+    setMessage(" ✔ Account Created Successfully!", "success");
     resetInput();
   }
 });
 
-function setLocalStorage() {
+ export default function setLocalStorage() {
   localStorage.setItem("userName", userName.value);
   localStorage.setItem("email", email.value);
   localStorage.setItem("password", password.value);
@@ -47,21 +50,42 @@ const loginBtn = document.getElementById("login-btn");
 const cEmail = document.getElementById("cEmail");
 const cPassword = document.getElementById("cPassword");
 
+
+
 loginBtn.addEventListener("click", (event) => {
   event.preventDefault();
   var getEmail = localStorage.getItem("email", email.value);
   var getPwd = localStorage.getItem("password", password.value);
   if (getEmail === cEmail.value && getPwd === cPassword.value) {
-    alert("Login Successfully!");
-    window.location = "index.html";
-    homeLogin.textContent = "HI";
+    setMessage("✔ Login Successfully!", "success");
+    setTimeout(() => {
+      nav();
+    }, 2000);
     resetInput();
   } else {
-    alert("Invaild login");
+    setMessage("❌ Invaild Login", "error");
     resetInput();
   }
 });
-
+function nav() {
+  window.location.href = "index.html";
+}
+function setMessage(msg, type) {
+  if (flag === 1) {
+    flag = 0;
+    const div = document.createElement("div");
+    const p = document.createElement("p");
+    p.classList = type;
+    p.textContent = msg;
+    console.log(p);
+    div.append(p);
+    heading.insertAdjacentElement("afterend", div);
+    setTimeout(() => {
+      flag = 1;
+      div.remove();
+    }, 2000);
+  }
+}
 function resetInput() {
   userName.value = "";
   email.value = "";
@@ -71,8 +95,7 @@ function resetInput() {
   cPassword.value = "";
 }
 
-forgotPassword.addEventListener("click", () => {
-  alert("Please create a new account");
-});
 
-console.log(document);
+forgotPassword.addEventListener("click", () => {
+  setMessage("Please create a new account", "error");
+});

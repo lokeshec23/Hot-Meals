@@ -17,7 +17,7 @@ body {
   height: 100vh;
   margin: -20px 0 50px;
 }
-#heading{
+#heading {
   color: var(--theme-primary, #ffb30e);
   font-family: "Qwigley", cursive;
   font-size: 80px;
@@ -259,30 +259,56 @@ footer a {
 }
 
 .success {
-  background: #3c97bf;
+  background: #198754;
   color: #eee;
-  font-family: "Poppins", sans-serif;
-  margin: 5px;
-  padding: 5px;
-  border: 1px solid #000;
+  font-size: 18px;
+  font-family: monospace, sans-serif;
+  width: 768px;
+  max-width: 100%;
+  height: 50px;
+  border: 1px solid #198754;
   border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
 }
 
 .error {
-  background: #f44336;
+  background: #dc3545;
   color: #eee;
-  font-family: "Poppins", sans-serif;
-  margin: 5px;
-  padding: 5px;
-  border: 1px solid #000;
+  font-size: 18px;
+  font-family: monospace, sans-serif;
+  width: 768px;
+  max-width: 100%;
+  height: 50px;
+  border: 1px solid #dc3545;
   border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
 }
 
-.form-heading{
+.form-heading {
   font-family: cursive, sans-serif;
 }
 
-#forgot-password{
+#forgot-password {
   cursor: pointer;
   margin-bottom: 10px;
+}
+
+.main-heading {
+  color: var(--theme-primary, #ffb30e);
+  font-family: "Qwigley", cursive;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.sub-heading {
+  font-family: "poppins";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
 }
