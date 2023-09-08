@@ -21,6 +21,7 @@ header {
   justify-content: space-around;
   align-items: center;
   background: #fff;
+  
 }
 
 header #heading {
@@ -87,6 +88,23 @@ header button {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.box{
+  color: #ffb30e;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  background-color: #fff;
+  position: relative;
+}
+.cart-count{
+  position: absolute;
+}
+#cart-icon{
+  position: absolute;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 /* end header */
 
@@ -224,26 +242,26 @@ header button {
   margin-bottom: 10px;
 }
 
-#find-food{
+#find-food {
   text-decoration: none;
   color: #fff;
 }
 /* End Yellow Container */
 
 /* Add to cart */
-#south-indian{
+#south-indian {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
 }
 
-#south-indian div{
-  display:flex;
+#south-indian div {
+  display: flex;
   flex-direction: column;
 }
 
-#south-indian h3{
+#south-indian h3 {
   color: var(--theme-gray-800, #000);
   font-family: Open Sans, sans-serif;
   font-size: 18px;
@@ -252,11 +270,13 @@ header button {
   line-height: 120%; /* 26.4px */
 }
 
-#south-indian button{
+#south-indian .add {
   border-radius: 5px;
+
   border: 1px solid #cfcfcf;
   width: 100px;
-  padding: .5rem calc(.5em + .75rem) ;
+  padding: 10px;
+
   cursor: pointer;
   margin-top: 10px;
   background: #fff;
@@ -265,36 +285,65 @@ header button {
   display: block;
 }
 
-#south-indian button:hover, #south-indian button:focus{
+#south-indian button:hover,
+#south-indian button:focus {
   box-shadow: 5px 5px 10px rgba(224, 224, 224, 0.5);
 }
 
-.value{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 16px;
-  font-weight: 700;
-  border: none;
+#south-indian img {
   width: 20px;
+  position: relative;
+  top: 5px;
+  left: 0;
+  right: 0px;
+  bottom: 0;
+}
+
+.best {
+  color: var(--theme-primary, #ffb30e);
+  font-family: Open sans;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.after_ {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #cfcfcf;
+  cursor: pointer;
   outline: none;
+  border-radius: 5px;
+  color: #ffb30e;
+  font-size: 16px
 }
 
 
-#idli div{
+#idli div {
   margin: 10px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 
-#dosa div{
+#dosa div {
   margin: 10px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 
-#rice div{
+#rice div {
   margin: 10px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 
-#cart-heading{
-  margin: 50px 0 20px  120px;
+#cart-heading {
+  margin: 50px 0 20px 120px;
   color: var(--theme-primary, #ffb30e);
   font-family: "Qwigley", cursive;
   font-size: 80px;
@@ -302,7 +351,6 @@ header button {
   font-weight: 400;
   line-height: 120%;
 }
-
 
 /* End Add to cart */
 /* showcase img */
