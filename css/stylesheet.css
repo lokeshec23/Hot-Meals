@@ -261,11 +261,25 @@ header button {
   margin-top: 10px;
   background: #fff;
   color: #ffb30e;
+  outline: none;
+  display: block;
 }
 
 #south-indian button:hover, #south-indian button:focus{
   box-shadow: 5px 5px 10px rgba(224, 224, 224, 0.5);
 }
+
+.value{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  width: 20px;
+  outline: none;
+}
+
 
 #idli div{
   margin: 10px;
