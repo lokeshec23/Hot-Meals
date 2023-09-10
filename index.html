@@ -19,7 +19,9 @@
   <body>
     <!-- Header -->
     <header>
-      <p id="heading">Hot meals</p>
+      <p id="heading">
+        <a style="text-decoration: none; color: #ffb30e" href="#">Hot meals</a>
+      </p>
       <p id="address">
         <strong>Deliver to: </strong
         ><span
@@ -27,18 +29,25 @@
         ></span>
         Current Location <strong>Ashok Nagar, Chennai-600013</strong>
       </p>
-      <!-- <p>
+      <p>
         <span
           ><i
             class="fa-solid fa-magnifying-glass"
             style="color: #ffb30e"
           ></i></span
         ><strong> Search Food</strong>
-      </p> -->
-      <div class="box">
-        <div class="cart-count">0</div>
-          <i class="fa-solid fa-cart-shopping" id="cart-icon" name="cart" style="color: #ffb30e"></i>
-      </div>
+      </p>
+      <!-- <div class="box">
+        <div id="cart-count">0</div>
+        <a href="addToCart.html">
+          <i
+            class="fa-solid fa-cart-shopping"
+            id="cart-icon"
+            name="cart"
+            style="color: #ffb30e"
+          ></i>
+        </a>
+      </div> -->
       <button>
         <span><i class="fa-solid fa-user" style="color: #ffb30e"></i></span
         ><a href="register.html" id="home-login">Login</a>
@@ -49,7 +58,9 @@
     <!-- Yellow container -->
     <div id="yellow-container">
       <div id="text-container">
-        <p id="main-text">Look at your fav meals</p>
+        <div class="change-container">
+          <span id="main-text">Look at your fav meals</span>
+        </div>
         <p id="sub-text">
           Within a few clicks, find meals that are accessible near you
         </p>
@@ -100,97 +111,127 @@
       <marquee>Where Every Bite Tells a Story.!!  </marquee>
     </div> -->
     <!-- end offer marquee -->
-    <!-- Add to cart -->
-    <h2 id="cart-heading">Quick Order</h2>
+    <!--  class="add-cart" Order -->
+    <h2 id="cart-heading">Quick Menu</h2>
     <div id="south-indian">
       <div id="idli">
         <h3>Idli & Vada</h3>
         <div>
-          
-          <p>
-            <span><img src="./img/icons/veg-lcon.png"/></span>
-            Idli (2 Pcs) <span class="best"><i class="fa-solid fa-star"></i> Bestseller</span></p>
-          <strong class="price">₹ 38</strong>
-          <button class="add addition">Add To Cart</button>
+          <p class="food-title">
+            <span><img src="./img/icons/veg-lcon.png" /></span>
+            Idli (2 Pcs)
+            <span class="best"
+              ><i class="fa-solid fa-star"></i> Bestseller</span
+            >
+          </p>
+          <strong class="food-price">₹ 38</strong>
+          <button class="add add-cart">ORDER</button>
         </div>
 
         <div>
-
-          <p><span><img src="./img/icons/veg-lcon.png"/></span>Vada</p>
-          <strong class="price">₹ 33</strong>
-          <button class="add">Add To Cart</button>
+          <p class="food-title">
+            <span><img src="./img/icons/veg-lcon.png" /></span>Vada
+          </p>
+          <strong class="food-price">₹ 33</strong>
+          <button class="add add-cart">ORDER</button>
         </div>
 
         <div>
-          <p><span><img src="./img/icons/veg-lcon.png"/></span>Curd Vada (2 Pcs)</p>
-          <strong class="price">₹ 67</strong>
-          <button class="add">Add To Cart</button>
+          <p class="food-title">
+            <span><img src="./img/icons/veg-lcon.png" /></span>Curd Vada (2 Pcs)
+          </p>
+          <strong class="food-price">₹ 67</strong>
+          <button class="add add-cart">ORDER</button>
         </div>
 
         <div>
-          <p><span><img src="./img/icons/veg-lcon.png"/></span>Special Vada (1 Pcs)</p>
-          <strong class="price">₹ 20</strong>
-          <button class="add">Add To Cart</button>
+          <p class="food-title">
+            <span><img src="./img/icons/veg-lcon.png" /></span>Special Vada (1
+            Pcs)
+          </p>
+          <strong class="food-price">₹ 20</strong>
+          <button class="add add-cart">ORDER</button>
         </div>
       </div>
 
       <div id="dosa">
         <h3>Dosa</h3>
         <div>
-
-          <p><span><img src="./img/icons/veg-lcon.png"/></span>Special Dosa</p>
-          <strong class="price">₹ 67</strong>
-          <button class="add">Add To Cart</button>
+          <p class="food-title">
+            <span><img src="./img/icons/veg-lcon.png" /></span>Special Dosa
+          </p>
+          <strong class="food-price">₹ 67</strong>
+          <button class="add add-cart">ORDER</button>
         </div>
 
         <div>
-          <p><span><img src="./img/icons/veg-lcon.png"/></span>Ghee Roast Dosa <span class="best"><i class="fa-solid fa-star"></i> Bestseller</span></p>
-          <strong class="price">₹ 110</strong>
-          <button class="add">Add To Cart</button>
+          <p>
+            <span><img src="./img/icons/veg-lcon.png" /></span>Ghee Roast Dosa
+            <span class="best"
+              ><i class="fa-solid fa-star"></i> Bestseller</span
+            >
+          </p>
+          <strong class="food-price">₹ 110</strong>
+          <button class="add add-cart">ORDER</button>
         </div>
 
         <div>
-          <p><span><img src="./img/icons/veg-lcon.png"/></span>Podi Dosa</p>
-          <strong class="price">₹ 90</strong>
-          <button class="add">Add To Cart</button>
+          <p class="food-title">
+            <span><img src="./img/icons/veg-lcon.png" /></span>Podi Dosa
+          </p>
+          <strong class="food-price">₹ 90</strong>
+          <button class="add add-cart">ORDER</button>
         </div>
 
         <div>
-          <p><span><img src="./img/icons/veg-lcon.png"/></span>Butter Dosa</p>
-          <strong class="price">₹ 130</strong>
-          <button class="add">Add To Cart</button>
+          <p class="food-title">
+            <span><img src="./img/icons/veg-lcon.png" /></span>Butter Dosa
+          </p>
+          <strong class="food-price">₹ 130</strong>
+          <button class="add add-cart">ORDER</button>
         </div>
       </div>
 
       <div id="rice">
         <h3>Rice</h3>
         <div>
-          <p><span><img src="./img/icons/veg-lcon.png"/></span>Lemon Rice</p>
-          <strong class="price">₹ 50</strong>
-          <button class="add">Add To Cart</button>
+          <p class="food-title">
+            <span><img src="./img/icons/veg-lcon.png" /></span>Lemon Rice
+          </p>
+          <strong class="food-price">₹ 50</strong>
+          <button class="add add-cart">ORDER</button>
         </div>
 
         <div>
-          <p><span><img src="./img/icons/veg-lcon.png"/></span>Curd Rice</p>
-          <strong class="price">₹ 50</strong>
-          <button class="add">Add To Cart</button>
+          <p class="food-title">
+            <span><img src="./img/icons/veg-lcon.png" /></span>Curd Rice
+          </p>
+          <strong class="food-price">₹ 50</strong>
+          <button class="add add-cart">ORDER</button>
         </div>
 
         <div>
-          <p><span><img src="./img/icons/veg-lcon.png"/></span>Sambar Rice</p>
-          <strong class="price">₹ 50</strong>
-          <button class="add">Add To Cart</button>
+          <p class="food-title">
+            <span><img src="./img/icons/veg-lcon.png" /></span>Sambar Rice
+          </p>
+          <strong class="food-price">₹ 50</strong>
+          <button class="add add-cart">ORDER</button>
         </div>
 
         <div>
-          <p><span><img src="./img/icons/veg-lcon.png"/></span>Brinji Kurma  <span class="best"><i class="fa-solid fa-star"></i> Bestseller</span></p>
-          <strong class="price">₹ 70</strong>
-          <button class="add">Add To Cart</button>
+          <p class="food-title">
+            <span><img src="./img/icons/veg-lcon.png" /></span>Brinji Kurma
+            <span class="best"
+              ><i class="fa-solid fa-star"></i> Bestseller</span
+            >
+          </p>
+          <strong class="food-price">₹ 70</strong>
+          <button class="add add-cart">ORDER</button>
         </div>
       </div>
     </div>
 
-    <!-- End Add to cart -->
+    <!-- End ORDER -->
 
     <!-- showcase food -->
     <div id="showcase">
@@ -306,7 +347,7 @@
           Enjoy the large size of Dosa. Complete <br />
           perfect slice of Dosa.
         </p>
-        <button>PROCEED TO ORDER ></button>
+        <button class="add-cart">PROCEED TO ORDER ></button>
       </div>
 
       <div>
@@ -326,32 +367,32 @@
         <div class="col-4">
           <img src="./img/murukku.png" alt="murukku" />
           <p>Murukku</p>
-          <button>Order Now</button>
+          <button    class="add-cart">Order Now</button>
         </div>
 
         <!-- 2 -->
         <div class="col-4">
           <img src="./img/paniyaram.png" alt="paniyaram" />
           <p>Paniyaram</p>
-          <button>Order Now</button>
+          <button   class="add-cart">Order Now</button>
         </div>
         <!-- 3 -->
         <div class="col-4">
           <img src="./img/seeval-murukku.png" alt="seeval=seeval-murukku" />
           <p>Seeval Murukku</p>
-          <button>Order Now</button>
+          <button  class="add-cart">Order Now</button>
         </div>
         <!-- 4 -->
         <div class="col-4">
           <img src="./img/mixture.png" alt="mixture" />
           <p>Mixture</p>
-          <button>Order Now</button>
+          <button  class="add-cart">Order Now</button>
         </div>
         <!-- 5 -->
         <div class="col-4">
           <img src="./img/veg-soup.png" alt="veg sopu" />
           <p>Veg Soup</p>
-          <button>Order Now</button>
+          <button  class="add-cart">Order Now</button>
         </div>
       </div>
 
@@ -360,7 +401,7 @@
         <div class="col-4">
           <img src="./img/gulab-jamun.png" alt="Gulab jamun" />
           <p>Gulab Jamun</p>
-          <button>Order Now</button>
+          <button  class="add-cart">Order Now</button>
         </div>
 
         <!-- 7 -->
@@ -370,25 +411,25 @@
             alt="porivellangai-urudai"
           />
           <p>Porivellangai Urudai</p>
-          <button>Order Now</button>
+          <button  class="add-cart">Order Now</button>
         </div>
         <!-- 8 -->
         <div class="col-4">
           <img src="./img/jangri.png" alt="jangri" />
           <p>Jangri</p>
-          <button>Order Now</button>
+          <button  class="add-cart">Order Now</button>
         </div>
         <!-- 9 -->
         <div class="col-4">
           <img src="./img/lattu.png" alt="lattu" />
           <p>Lattu</p>
-          <button>Order Now</button>
+          <button  class="add-cart">Order Now</button>
         </div>
         <!-- 10 -->
         <div class="col-4">
           <img src="./img/halwa.png" alt="halwa" />
           <p>Halwa</p>
-          <button>Order Now</button>
+          <button  class="add-cart">Order Now</button>
         </div>
       </div>
     </div>

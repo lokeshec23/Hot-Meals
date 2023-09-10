@@ -21,7 +21,6 @@ header {
   justify-content: space-around;
   align-items: center;
   background: #fff;
-  
 }
 
 header #heading {
@@ -30,7 +29,7 @@ header #heading {
   font-size: 80px;
   font-style: normal;
   font-weight: 400;
-  line-height: 120%;
+  text-decoration: underline;
 }
 
 header #address {
@@ -40,6 +39,7 @@ header #address {
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
+  
 }
 
 header strong {
@@ -90,21 +90,32 @@ header button {
   -webkit-text-fill-color: transparent;
 }
 
-.box{
+.box {
   color: #ffb30e;
   width: 30px;
   height: 30px;
   text-align: center;
   background-color: #fff;
-  position: relative;
+  /* position: relative; */
+  /* display: flex;
+  flex-direction: row-reverse; */
 }
-.cart-count{
+#cart-count {
+  margin-left: 20px;
   position: absolute;
+  top: 30px;
+  /* margin-top: 20px; */
+  width: 20px;
+  border: 2px solid #ffb30e;
+  border-radius: 50%;
+  background-color: #ffb30e;
+  color: #fff;
 }
-#cart-icon{
+#cart-icon {
   position: absolute;
   font-size: 1.5rem;
   cursor: pointer;
+  top: 60px;
 }
 /* end header */
 
@@ -270,13 +281,11 @@ header button {
   line-height: 120%; /* 26.4px */
 }
 
-#south-indian .add {
+#south-indian .add:hover {
   border-radius: 5px;
-
   border: 1px solid #cfcfcf;
   width: 100px;
   padding: 10px;
-
   cursor: pointer;
   margin-top: 10px;
   background: #fff;
@@ -307,7 +316,7 @@ header button {
   font-weight: 400;
 }
 
-.after_ {
+/* .after_ {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -318,8 +327,7 @@ header button {
   border-radius: 5px;
   color: #ffb30e;
   font-size: 16px
-}
-
+} */
 
 #idli div {
   margin: 10px;
@@ -350,6 +358,20 @@ header button {
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
+}
+
+.add{
+  background: #ffb30e;
+  color: #ffffff;
+  font-weight: 700;
+  content: " ";
+  border-radius: 5px;
+  border: 1px solid #cfcfcf;
+  width: 100px;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  outline: none;
 }
 
 /* End Add to cart */
