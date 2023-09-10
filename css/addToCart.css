@@ -286,7 +286,7 @@ h2.title {
   cursor: pointer;
 }
 
-#close-btn {
+#cart-close{
   position: absolute;
   top: 1rem;
   right: 0.8rem;
