@@ -20,6 +20,7 @@ header {
   width: 100%;
   z-index: 99;
   background-color: #fff;
+  padding: 10px;
 }
 
 #heading {
@@ -120,6 +121,10 @@ h2.title {
   width: 100%;
 }
 
+.container .title{
+  margin: 10px;
+}
+
 .shop-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, auto));
@@ -176,6 +181,7 @@ h2.title {
 .add-cart:hover {
   opacity: 0.9;
 }
+
 
 .cart {
   position: fixed;
