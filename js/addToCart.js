@@ -15,7 +15,10 @@ if (uName) {
 btnCart.addEventListener("click", () => {
   if (homeLoginBtn.innerHTML === "Login") {
     alert("Please Login to continue");
-  } else {
+  } else if(itemList.length == 0){
+    alert('Please Add Items into Cart')
+  } 
+  else {
     cart.classList.add("cart-active");
   }
 });
