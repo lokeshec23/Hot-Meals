@@ -2,6 +2,15 @@ const btnCart = document.querySelector("#cart-icon");
 const cart = document.querySelector(".cart");
 const btnClose = document.querySelector("#cart-close");
 
+const homeLoginBtn = document.getElementById("home-login");
+const uName = localStorage.getItem("userName");
+
+if (uName) {
+  homeLoginBtn.innerHTML = uName;
+} else {
+  homeLoginBtn.innerHTML = "Login";
+}
+
 btnCart.addEventListener("click", () => {
   cart.classList.add("cart-active");
 });
@@ -11,7 +20,6 @@ btnClose.addEventListener("click", () => {
 });
 
 document.addEventListener("DOMContentLoaded", loadFood);
-
 function loadFood() {
   loadContent();
 }
@@ -97,7 +105,7 @@ function createCartProduct(title, price, imgSrc) {
                     <div class="cart-price">${price}</div>
                     <div class="cart-amt">${price}</div>
                 </div>
-                <input type="number" value="1" min="1" class="cart-quantity">    
+                <input type="number" value="1" class="cart-quantity">    
             </div>
             <i class="fa-solid fa-trash cart-remove" style="color: #ffb329;"></i>
           </div>
@@ -128,4 +136,21 @@ function updateTotal() {
   } else {
     cartCount.style.display = "block";
   }
+}
+
+let btnBuy = document.querySelector(".btn-buy");
+let paymentContainer = document.querySelector(".payment-container");
+btnBuy.addEventListener("click", () => {
+  if (itemList.length == 0) {
+    alert("Please Add Items To Cart");
+  } else if (itemList.length == 1) {
+    alert("Item Ordered Successfully!!");
+  } else {
+    alert("Items Ordered Successfully!!");
+  }
+  resetCart();
+});
+
+function resetCart() {
+  cart.classList.toggle("cart-active");
 }

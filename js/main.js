@@ -2,7 +2,6 @@ const signUpButton = document.getElementById("signUp");
 const signInButton = document.getElementById("signIn");
 const container = document.getElementById("container");
 
-
 const heading = document.getElementById("heading");
 
 const userName = document.getElementById("name");
@@ -23,6 +22,8 @@ signInButton.addEventListener("click", () => {
 
 signBtn.addEventListener("click", (event) => {
   event.preventDefault();
+  const userNameValue = userName.value;
+
   if (
     userName.value === "" ||
     email.value === "" ||
@@ -34,14 +35,14 @@ signBtn.addEventListener("click", (event) => {
     setMessage("🚫 Password doesn't match!", "error");
     resetInput();
   } else {
-    setLocalStorage();
-    setMessage(" ✔ Account Created Successfully!", "success");
+    setLocalStorage(userNameValue);
+    setMessage(" ✔ Account Created Successfully! ", "success");
     resetInput();
   }
 });
 
- export default function setLocalStorage() {
-  localStorage.setItem("userName", userName.value);
+function setLocalStorage(userNameValue) {
+  localStorage.setItem("userName", userNameValue);
   localStorage.setItem("email", email.value);
   localStorage.setItem("password", password.value);
 }
@@ -50,14 +51,15 @@ const loginBtn = document.getElementById("login-btn");
 const cEmail = document.getElementById("cEmail");
 const cPassword = document.getElementById("cPassword");
 
-
-
 loginBtn.addEventListener("click", (event) => {
   event.preventDefault();
   var getEmail = localStorage.getItem("email", email.value);
   var getPwd = localStorage.getItem("password", password.value);
   if (getEmail === cEmail.value && getPwd === cPassword.value) {
-    setMessage("✔ Login Successfully!", "success");
+    setMessage(
+      ` ✔ Login Successfully! You Will redirect to Home page in few second... `,
+      "success"
+    );
     setTimeout(() => {
       nav();
     }, 2000);
@@ -94,7 +96,6 @@ function resetInput() {
   cEmail.value = "";
   cPassword.value = "";
 }
-
 
 forgotPassword.addEventListener("click", () => {
   setMessage("Please create a new account", "error");

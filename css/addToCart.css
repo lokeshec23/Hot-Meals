@@ -121,7 +121,7 @@ h2.title {
   width: 100%;
 }
 
-.container .title{
+.container .title {
   margin: 10px;
 }
 
@@ -181,7 +181,6 @@ h2.title {
 .add-cart:hover {
   opacity: 0.9;
 }
-
 
 .cart {
   position: fixed;
@@ -284,18 +283,49 @@ h2.title {
 
 .btn-buy {
   padding: 12px 20px;
-  background-color: #2f3542;
+  background-color: #60b246;
   color: #fff;
   border: none;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
+  width: 100%;
+  margin: 10px;
 }
 
-#cart-close{
+#cart-close {
   position: absolute;
   top: 1rem;
   right: 0.8rem;
   font-size: 2rem;
   cursor: pointer;
 }
+
+.payment-container {
+  display: "none";
+}
+
+#login-btn {
+  display: flex;
+  cursor: pointer;
+  width: 118px;
+  justify-self: center;
+  align-items: center;
+  padding: 14px 20px;
+  gap: 10px;
+  border-radius: 8px;
+  background: var(
+    --yellow-button,
+    linear-gradient(150deg, #ffb800 0%, #ff8a00 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  border: 1px solid #ffb800;
+  outline: none;
+}
+
+
