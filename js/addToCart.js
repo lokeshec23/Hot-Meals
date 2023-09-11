@@ -1,3 +1,4 @@
+let itemList = [];
 const btnCart = document.querySelector("#cart-icon");
 const cart = document.querySelector(".cart");
 const btnClose = document.querySelector("#cart-close");
@@ -12,7 +13,11 @@ if (uName) {
 }
 
 btnCart.addEventListener("click", () => {
-  cart.classList.add("cart-active");
+  if (homeLoginBtn.innerHTML === "Login") {
+    alert("Please Login to continue");
+  } else {
+    cart.classList.add("cart-active");
+  }
 });
 
 btnClose.addEventListener("click", () => {
@@ -42,6 +47,14 @@ function loadContent() {
     btn.addEventListener("click", addCart);
   });
 
+  const cartCount = document.querySelector(".cart-count");
+  let count = itemList.length;
+  cartCount.innerHTML = count;
+  if (count == 0) {
+    cartCount.style.display = "none";
+  } else {
+    cartCount.style.display = "block";
+  }
   updateTotal();
 }
 
@@ -62,8 +75,6 @@ function changeQty() {
   }
   loadContent();
 }
-
-let itemList = [];
 
 //Add Cart
 function addCart() {
@@ -97,19 +108,19 @@ function addCart() {
 
 function createCartProduct(title, price, imgSrc) {
   return `
-            <div class="cart-box">
-            <img src="${imgSrc}" class="cart-img" alt="">
-            <div class="detail-box">
-                <div class="cart-food-title">${title}</div>
+  <div class="cart-box">
+  <img src="${imgSrc}" class="cart-img" alt="">
+  <div class="detail-box">
+  <div class="cart-food-title">${title}</div>
                 <div class="price-box">
-                    <div class="cart-price">${price}</div>
-                    <div class="cart-amt">${price}</div>
+                <div class="cart-price">${price}</div>
+                <div class="cart-amt">${price}</div>
                 </div>
                 <input type="number" value="1" class="cart-quantity">    
-            </div>
+                </div>
             <i class="fa-solid fa-trash cart-remove" style="color: #ffb329;"></i>
           </div>
-      `;
+          `;
 }
 
 function updateTotal() {
@@ -127,15 +138,9 @@ function updateTotal() {
   totalValue.innerHTML = "₹ " + total;
 
   // ADD product count in cart icon
-  const cartCount = document.querySelector(".cart-count");
-  let count = itemList.length;
-  cartCount.innerHTML = count;
 
-  if (count == 0) {
-    cartCount.style.display = "none";
-  } else {
-    cartCount.style.display = "block";
-  }
+  let totalItem = document.querySelector(".total-item");
+  totalItem.innerHTML = `Total Item: <strong>${itemList.length}</strong>`;
 }
 
 let btnBuy = document.querySelector(".btn-buy");

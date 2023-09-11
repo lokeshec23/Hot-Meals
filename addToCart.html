@@ -12,7 +12,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Hot Meals</title>
+    <title>Hot Meals-Add To Cart</title>
   </head>
   <body>
     <!-- header -->
@@ -23,13 +23,17 @@
         </p>
 
         <div>
-          <p id="address">
-            <strong>Deliver to: </strong
-            ><span
-              ><i class="fa-solid fa-location-dot" style="color: #ffb329"></i
-            ></span>
-            Current Location <strong>Ashok Nagar, Chennai-600013</strong>
-          </p>
+          <a
+        href="https://www.google.com/maps/place/Welcome+Hotel/@13.0865644,80.2555639,17z/data=!4m18!1m8!3m7!1s0x3a5265dca1806f09:0x2b7e01875ad82bf4!2sPurasaiwakkam,+Chennai,+Tamil+Nadu!3b1!8m2!3d13.0902242!4d80.2542716!16s%2Fm%2F02qc0_1!3m8!1s0x3a5265e0a1d365c5:0xc32240a52fa91844!5m2!4m1!1i2!8m2!3d13.0858651!4d80.2546232!16s%2Fg%2F1tfm5283?entry=ttu"
+        id="address"
+        target="_blank"
+      >
+        <strong>Deliver to: </strong
+        ><span
+          ><i class="fa-solid fa-location-dot" style="color: #ffb329"></i
+        ></span>
+        Current Location <strong>Purasawakkam, Chennai-600007</strong>
+      </a>
         </div>
 
         <div class="box">
@@ -57,7 +61,7 @@
                 <div class="total-price">₹ 0</div>
               </div>
               <button class="btn-buy"> Proceed To Pay </button>
-              <div>Total Items</div>
+              <div class="total-item"> Total Items:</div>
               <i class="fa-solid fa-xmark" id="cart-close" style="color: #ffb329;"></i>
               <!-- end total -->
             </div>
@@ -190,6 +194,65 @@
      </div>
     </div>
     <!-- end add to cart container -->
+
+        <!-- footer -->
+        <footer>
+          <div id="main-footer">
+            <div class="footer-cols">
+              <!-- Footer Links - Column 1 -->
+              <ul>
+                <li>Company</li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+              <!-- Footer Links - Column 2 -->
+              <ul>
+                <li>Contact</li>
+                <li><a href="#">Help & Support</a></li>
+                <li><a href="#">Partner with us</a></li>
+                <li><a href="#">Ride with us</a></li>
+              </ul>
+              <!-- Footer Links - Column 3 -->
+              <ul>
+                <li>Legal</li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Refund & Cancellation</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+              </ul>
+              <!-- Footer Links - Column 4 -->
+              <div id="left">
+                <p id="follow-us">FOLLOW US</p>
+                <div id="media-link">
+                  <span><i class="fa-brands fa-instagram"></i></span>
+                  <span><i class="fa-brands fa-facebook"></i></span>
+                  <span><i class="fa-brands fa-twitter"></i></span>
+                </div>
+                <p id="footer-text">Receive exclusive offers in your mailbox</p>
+                <div id="footer-form">
+                  <div id="icon-link">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      placeholder="Enter Your email"
+                    />
+                  </div>
+                  <button>Subscribe</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div id="sub-footer">
+            <p>All rigth Reserved &copy;</p>
+            <p>Made with 💛 by <strong>SLK</strong></p>
+          </div>
+        </footer>
+        <!-- end footer -->
     <script src="./js/addToCart.js"></script>
   </body>
 </html>

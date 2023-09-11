@@ -39,7 +39,6 @@ header #address {
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
-  
 }
 
 header strong {
@@ -69,7 +68,7 @@ header i {
 header button {
   cursor: pointer;
   background: #fff;
-  width: 118px;
+  /* width: px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -351,7 +350,7 @@ header button {
 }
 
 #cart-heading {
-  margin: 50px 0 20px 120px;
+  margin: 20px 0 20px 100px;
   color: var(--theme-primary, #ffb30e);
   font-family: "Qwigley", cursive;
   font-size: 80px;
@@ -360,7 +359,7 @@ header button {
   line-height: 120%;
 }
 
-.add{
+.add {
   background: #ffb30e;
   color: #ffffff;
   font-weight: 700;
@@ -826,3 +825,27 @@ footer #footer-text {
   margin-top: 10px;
 }
 /* end footer */
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #fff; /* Background color for the marquee container */
+}
+
+.marquee-text {
+  display: inline-block;
+  padding: 20px;
+  font-size: 24px;
+  color: #333;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
